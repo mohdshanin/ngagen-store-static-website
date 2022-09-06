@@ -1,0 +1,26 @@
+{
+  "name": "ngagen-store-static-website",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next dev",
+    "start": "next start"
+  },
+  "dependencies": {
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "next": "12.2.5"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/koinearth/ngagen-store-static-website.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/koinearth/ngagen-store-static-website/issues"
+  },
+  "homepage": "https://github.com/koinearth/ngagen-store-static-website#readme"
+}
