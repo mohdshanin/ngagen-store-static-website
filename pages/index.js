@@ -1,5 +1,9 @@
-function Home() {
-  return <p>ngageN v3</p>;
+import React from "react";
+
+import Home from "components/Home";
+
+function HomePage() {
+  return <Home />;
 }
 
-export default Home;
+export default HomePage;
