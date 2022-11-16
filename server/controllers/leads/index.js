@@ -1,4 +1,5 @@
 const leadsService = require("server/services/leads")();
+const { REGEX } = require("../../utils/constants");
 
 async function create(req, res) {
   try {
@@ -9,7 +10,8 @@ async function create(req, res) {
       return;
     }
 
-    if (!/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/.test(email)) {
+    const emailRegex = new RegExp(REGEX.EMAIL);
+    if (!emailRegex.test(email)) {
       res.status(400).send("Please enter valid email");
       return;
     }
