@@ -1,8 +1,12 @@
 .header_wrapper {
+  position: fixed;
+  top: 0;
+  width: 100%;
   display: flex;
+  transition: top 0.3s;
   width: 100%;
   justify-content: space-between;
-  z-index: 10;
+  z-index: 9999;
   background: #161e29;
   padding: 12px 0;
 }
@@ -15,7 +19,7 @@
   padding-left: 32px;
 }
 
-.logo_container .ngagen_logo {
+.ngagen_logo {
   width: 36px;
   height: auto;
 }
@@ -35,13 +39,32 @@
   padding-right: 32px;
 }
 
-.demo_btn {
-  font-size: 16px;
-  font-weight: 700;
-  line-height: 32px;
-  padding: 10px 45px;
-  color: white;
-  background: var(--orange-gradient);
-  border: none;
-  border-radius: 30px;
+@media only screen and (max-width: 780px) {
+  .logo_container {
+    padding-left: 18px;
+  }
+  .btn_container {
+    padding-right: 18px;
+  }
+  .header_wrapper {
+    padding: 0;
+  }
+}
+
+@media only screen and (max-width: 410px) {
+  .header_wrapper {
+    padding: 10px 0;
+  }
+  .logo_container {
+    padding-left: 10px;
+  }
+  .btn_container {
+    padding-right: 10px;
+  }
+  .ngagen_logo {
+    width: 28px;
+  }
+  .ngagen_logo_text {
+    display: none;
+  }
 }

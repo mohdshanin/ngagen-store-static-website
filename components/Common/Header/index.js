@@ -1,10 +1,24 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 import styles from "./Header.module.css";
 
 function Header() {
+  useEffect(() => {
+    var prevScrollpos = window.pageYOffset;
+    const navbar = document.getElementById("navbar");
+    window.onscroll = function () {
+      var currentScrollPos = window.pageYOffset;
+      if (prevScrollpos > currentScrollPos) {
+        navbar.style.top = "0";
+      } else {
+        navbar.style.top = `-${navbar.offsetHeight}px`;
+      }
+      prevScrollpos = currentScrollPos;
+    };
+  }, []);
+
   return (
-    <div className={styles.header_wrapper}>
+    <div id="navbar" className={styles.header_wrapper}>
       <div className={styles.logo_container}>
         <img
           src="/ngagen.svg"
@@ -16,9 +30,9 @@ function Header() {
         </p>
       </div>
       <div className={styles.btn_container}>
-        <button type="button" className={styles.demo_btn}>
+        <a href="#book-demo-form" type="button" className="book_demo_btn">
           Book a demo
-        </button>
+        </a>
       </div>
     </div>
   );

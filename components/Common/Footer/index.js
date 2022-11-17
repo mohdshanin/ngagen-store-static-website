@@ -1,5 +1,9 @@
 import React from "react";
 
+import FacebookIcon from "components/Common/Icons/Facebook";
+import TwitterIcon from "components/Common/Icons/Twitter";
+import InstagramIcon from "components/Common/Icons/Instagram";
+import DiscordIcon from "components/Common/Icons/Discord";
 import styles from "./Footer.module.css";
 
 const footerSections = [
@@ -45,22 +49,22 @@ const footerSections = [
 const socials = [
   {
     url: "https://facebook.com/ngagenft",
-    image: "/facebook.svg",
+    icon: <FacebookIcon />,
     label: "facebook",
   },
   {
     url: "https://twitter.com/ngagenft",
-    image: "/twitter.svg",
+    icon: <TwitterIcon />,
     label: "twitter",
   },
   {
     url: "https://instagram.com/ngagenft",
-    image: "/instagram.svg",
+    icon: <InstagramIcon />,
     label: "instagram",
   },
   {
     url: "https://discord.gg/dfwR4dvbj3",
-    image: "/discord.svg",
+    icon: <DiscordIcon />,
     label: "discord",
   },
 ];
@@ -83,7 +87,7 @@ function Footer() {
             </p>
           </div>
           <div>
-            <p className={styles.description}>
+            <p className="description1">
               Please contact us if you have any Queries or Request on our email.
             </p>
             <a href="mailto:support@ngagen.com" className={styles.header}>
@@ -97,7 +101,7 @@ function Footer() {
             {footerSections.map(({ label, subSections }) => (
               <div
                 key={label}
-                className="display-flex flex-direction-column gap-1 mb-2"
+                className="display-flex flex-direction-column  mb-2"
               >
                 <div className="mb-1">
                   <h3 className={styles.header}>{label}</h3>
@@ -123,9 +127,9 @@ function Footer() {
       <div className={styles.social_wrapper}>
         <p className={styles.social_text}>Socials</p>
         <div className={styles.social_icons}>
-          {socials.map(({ url, image, label }) => (
+          {socials.map(({ url, icon, label }) => (
             <a href={url} target="_blank" key={label}>
-              <img src={image} alt={label} height="20" />
+              {icon}
             </a>
           ))}
         </div>
