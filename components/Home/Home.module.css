@@ -458,3 +458,10 @@
     padding: 8px;
   }
 }
+
+/* Success dialog */
+.success_dialog {
+  width: 100px;
+  height: 100px;
+  background: gray;
+}
