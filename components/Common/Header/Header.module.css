@@ -1,0 +1,70 @@
+.header_wrapper {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: flex;
+  transition: top 0.3s;
+  width: 100%;
+  justify-content: space-between;
+  z-index: 9999;
+  background: #161e29;
+  padding: 12px 0;
+}
+
+.logo_container {
+  border: none;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  padding-left: 32px;
+}
+
+.ngagen_logo {
+  width: 36px;
+  height: auto;
+}
+
+.ngagen_logo_text {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  letter-spacing: 0.06em;
+  margin-left: 8px;
+  display: block;
+}
+
+.btn_container {
+  display: flex;
+  align-items: center;
+  padding-right: 32px;
+}
+
+@media only screen and (max-width: 780px) {
+  .logo_container {
+    padding-left: 18px;
+  }
+  .btn_container {
+    padding-right: 18px;
+  }
+  .header_wrapper {
+    padding: 0;
+  }
+}
+
+@media only screen and (max-width: 410px) {
+  .header_wrapper {
+    padding: 10px 0;
+  }
+  .logo_container {
+    padding-left: 10px;
+  }
+  .btn_container {
+    padding-right: 10px;
+  }
+  .ngagen_logo {
+    width: 28px;
+  }
+  .ngagen_logo_text {
+    display: none;
+  }
+}

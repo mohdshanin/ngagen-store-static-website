@@ -1,0 +1,121 @@
+.container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 30px 50px;
+  gap: 20px;
+  border-top: 1px solid grey;
+}
+
+.section_wrapper {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.left_section {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.logo_container {
+  border: none;
+  background: transparent;
+  display: flex;
+  align-items: center;
+}
+
+.ngagen_logo {
+  width: 36px;
+  height: auto;
+}
+
+.ngagen_logo_text {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  letter-spacing: 0.06em;
+  margin-left: 8px;
+  display: block;
+}
+
+.description {
+  font-weight: 400;
+  font-size: 14px;
+  margin: 0;
+  color: #98a2b3;
+}
+
+.header {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 24px;
+  color: white;
+  text-decoration: none;
+}
+
+.info_section {
+  display: flex;
+  gap: 20px;
+}
+
+.info_item {
+  font-weight: 400;
+  font-size: 14px;
+  margin: 0;
+  color: white;
+  text-decoration: none;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.social_text {
+  font-weight: 400;
+  font-size: 14px;
+  color: white;
+}
+
+.social_icons {
+  display: flex;
+  gap: 20px;
+}
+
+.copy_right {
+  color: #98a2b3;
+}
+
+.koinearth {
+  color: #0071c2;
+}
+
+@media only screen and (max-width: 550px) {
+  .section_wrapper {
+    flex-direction: column;
+  }
+
+  .left_section {
+    text-align: center;
+    align-items: center;
+  }
+
+  .right_section {
+    display: flex;
+    justify-content: center;
+  }
+
+  .social_wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media only screen and (max-width: 410px) {
+  .ngagen_logo {
+    width: 32px;
+  }
+  .ngagen_logo_text {
+    font-size: 18px;
+  }
+}

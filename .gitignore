@@ -1,6 +1,19 @@
 node_modules
 .next
-.env
-.env.*
-out
+build
 .DS_Store
+.env
+bundles
+commit.txt
+tags
+TAGS
+.log/
+.idea/
+.vscode
+# PWA files
+**/public/sw.js
+**/public/workbox-*.js
+**/public/worker-*.js
+**/public/sw.js.map
+**/public/workbox-*.js.map
+**/public/worker-*.js.map

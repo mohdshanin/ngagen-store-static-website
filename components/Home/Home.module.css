@@ -1,0 +1,460 @@
+/* Banner styles */
+.banner_wrapper {
+  width: 100%;
+  position: relative;
+}
+
+.banner1 {
+  object-fit: cover;
+  height: 550px;
+}
+
+.banner2 {
+  height: 430px;
+  display: block;
+  object-fit: cover;
+}
+
+.banner_text {
+  position: absolute;
+  bottom: 0;
+  left: 3%;
+  z-index: 10;
+}
+
+.banner_text .banner_description {
+  font-weight: 400;
+  font-size: 20px;
+  padding-bottom: 2%;
+}
+
+.banner_shadow {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 90%;
+  z-index: 10;
+}
+
+.banner_shadow {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 90%;
+  z-index: 10;
+}
+
+@media only screen and (max-width: 780px) {
+  .banner1 {
+    height: 350px;
+  }
+  .banner2 {
+    height: 270px;
+  }
+  .banner_text .banner_description {
+    font-size: 15px;
+  }
+}
+
+@media only screen and (max-width: 410px) {
+  .banner1 {
+    height: 280px;
+  }
+  .banner2 {
+    height: 250px;
+  }
+  .banner_text .banner_description {
+    font-size: 13px;
+    padding-bottom: 1%;
+  }
+}
+
+/* Section styles */
+.section_wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  color: white;
+  min-height: 130px;
+  background-image: var(--mix-gradient-dark);
+  padding-top: 20px;
+  padding-bottom: 10px;
+}
+
+.section_item {
+  width: 30%;
+}
+
+/* Features styles */
+.feature {
+  display: flex;
+  margin: 80px 0;
+  align-items: center;
+  gap: 10px;
+}
+
+.feature_img {
+  width: 20%;
+}
+
+.feature_topimg {
+  position: absolute;
+  right: -15px;
+  top: -10%;
+}
+
+.feature_text {
+  padding-left: 10px;
+  width: 80%;
+}
+
+@media only screen and (max-width: 780px) {
+  .feature {
+    margin: 40px 0;
+  }
+}
+
+@media only screen and (max-width: 410px) {
+  .feature {
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 30px 0;
+  }
+  .feature_img {
+    margin-left: 20px;
+  }
+  .feature_img div {
+    padding-left: 20px;
+  }
+}
+
+/*Connect wallet card styles*/
+.demo_card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  position: relative;
+  background-image: var(--mix-gradient-dark);
+  background-clip: padding-box;
+  margin: 0 2rem;
+  border: 5px solid;
+  border-color: #0364ff rgba(255, 255, 255, 0.84) #5dbaec #ff811d;
+  border-radius: 2rem;
+}
+
+.demo_container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.demo_img_wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-left: 10%;
+}
+
+.card_img {
+  width: 312px;
+  height: 221px;
+  border-radius: 15px;
+}
+
+.btn_container {
+  display: flex;
+  align-items: center;
+  margin-top: 10%;
+}
+
+@media only screen and (max-width: 780px) {
+  .demo_container {
+    flex-direction: column-reverse;
+  }
+  .demo_img_wrapper {
+    padding-left: 0;
+  }
+  .card_img {
+    width: 258px;
+    height: 234px;
+  }
+  .card_text {
+    margin-top: 10px;
+  }
+}
+
+@media only screen and (max-width: 410px) {
+  .demo_card {
+    margin: 0 1rem;
+  }
+  .card_img {
+    width: 220px;
+    height: 180px;
+  }
+}
+
+/* Steps styles */
+.step_wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.step1_img {
+  height: 180px;
+}
+.step2_img {
+  height: 89px;
+}
+.step3_img {
+  height: 195px;
+}
+.step4_img {
+  height: 125px;
+}
+
+.step_img_width {
+  min-width: 25%;
+  padding: 0 30px;
+}
+
+.step_right {
+  position: relative;
+  padding-left: 25px;
+  padding-bottom: 30px;
+  border-left: 2px solid orange;
+  height: 100%;
+  width: 75%;
+}
+
+.dot {
+  position: absolute;
+  left: -9px;
+  height: 15px;
+  width: 15px;
+  background-color: white;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.step_attributes {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+@media only screen and (max-width: 780px) {
+  .step1_img {
+    height: 135px;
+  }
+  .step2_img {
+    height: 60px;
+  }
+  .step3_img {
+    height: 130px;
+  }
+  .step4_img {
+    height: 85px;
+  }
+  .step_img_width {
+    min-width: 20%;
+    padding: 0 20px;
+  }
+  .step_right {
+    margin-left: 10px;
+    min-width: 70%;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .step1_img,
+  .step2_img,
+  .step3_img,
+  .step4_img {
+    padding-left: 10px;
+    padding-bottom: 10px;
+  }
+}
+
+/* NFT card styles */
+.card_carousel {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  padding-top: 20px;
+  gap: 15px;
+}
+
+.card {
+  padding: 20px;
+  width: fit-content;
+  border-radius: 10px;
+  background: #151515;
+  max-width: 312px;
+}
+
+.card_image {
+  border-radius: 5px;
+}
+
+.icon_wrapper {
+  display: flex;
+  gap: 10px;
+}
+
+.card_title {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 24px;
+}
+
+.card_header {
+  padding-top: 20px;
+  font-weight: 700;
+  font-size: 12px;
+}
+
+.card_description {
+  font-weight: 400;
+  font-size: 12.25px;
+  line-height: 21px;
+}
+
+/* Coming soon styles */
+.coming_soon_wrapper {
+  margin-top: 50px;
+  position: relative;
+  height: 300px;
+  background: #747f92;
+}
+
+.coming_soon {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: -12%;
+  left: 25%;
+  width: 50%;
+  height: 375px;
+  background: #343741;
+}
+
+@media only screen and (max-width: 780px) {
+  .coming_soon_wrapper {
+    margin-top: 40px;
+    height: 150px;
+  }
+
+  .coming_soon {
+    top: -25%;
+    height: 225px;
+  }
+}
+@media only screen and (max-width: 550px) {
+  .coming_soon h1 {
+    font-size: 20px;
+  }
+}
+@media only screen and (max-width: 410px) {
+  .coming_soon_wrapper {
+    margin-top: 40px;
+    height: 100px;
+  }
+  .coming_soon {
+    top: -25%;
+    height: 150px;
+  }
+  .coming_soon h1 {
+    font-size: 12px;
+  }
+}
+
+/* Book demo form */
+.form_wrapper {
+  width: 100%;
+}
+
+.form {
+  margin: auto;
+  width: 35%;
+  height: fit-content;
+  letter-spacing: 0.1em;
+  text-align: center;
+}
+
+.input_header {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+  margin-bottom: 5px;
+  text-align: left;
+}
+
+.formControl {
+  font-family: "Poppins", "Raleway", "Nunito", "Inter", sans-serif;
+  width: 100%;
+  font-size: 16px;
+  border: none;
+  border-radius: 4px;
+  padding: 12px;
+  outline: none;
+  letter-spacing: 0.05em;
+}
+
+.formControl::-webkit-input-placeholder {
+  color: black; /*Change the placeholder color*/
+  opacity: 0.4; /*Change the opacity between 0 and 1*/
+}
+
+/* demo booked confirm dialog */
+.success_dialog {
+  display: flex;
+  flex-direction: column;
+  padding: 0 10% 5% 10%;
+  background: #161e29;
+}
+
+@media only screen and (max-width: 1200px) {
+  .form {
+    width: 40%;
+  }
+}
+@media only screen and (max-width: 900px) {
+  .form {
+    width: 50%;
+  }
+  .formControl,
+  .input_header {
+    font-size: 14px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .form {
+    width: 60%;
+  }
+  .input_header {
+    font-size: 14px;
+  }
+  .formControl {
+    font-size: 14px;
+    padding: 10px;
+  }
+}
+@media only screen and (max-width: 410px) {
+  .form {
+    width: 70%;
+  }
+  .input_header {
+    font-size: 12px;
+  }
+  .formControl {
+    font-size: 12px;
+    padding: 8px;
+  }
+}
