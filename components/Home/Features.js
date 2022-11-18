@@ -17,7 +17,7 @@ function Features() {
       <div className={styles.feature}>
         <div className={`img_wrapper ${styles.feature_img}`}>
           <img
-            src="/torus_wallet.svg"
+            src={`${process.env.NEXT_PUBLIC_WEB_ASSETS_URL}/asset-14.jpg`}
             alt="image"
             width="auto"
             height={isSmallMobile ? "25px" : "35px"}

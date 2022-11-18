@@ -16,7 +16,13 @@ function Section() {
       </div>
       <div className={styles.card_carousel}>
         <div className={styles.card}>
-          <img src="/card_img1.png" alt="image" width="312px" height="221px" />
+          <img
+            src={`${process.env.NEXT_PUBLIC_WEB_ASSETS_URL}/asset-15.jpg`}
+            alt="image"
+            width="312px"
+            height="221px"
+            className={styles.card_image}
+          />
           <div>
             <h3 className={styles.card_title}>
               Create your brand’s loyal community
@@ -34,7 +40,13 @@ function Section() {
           </p>
         </div>
         <div className={styles.card}>
-          <img src="/card_img2.png" alt="image" width="312px" height="221px" />
+          <img
+            src={`${process.env.NEXT_PUBLIC_WEB_ASSETS_URL}/asset-16.jpg`}
+            alt="image"
+            width="312px"
+            height="221px"
+            className={styles.card_image}
+          />
           <div>
             <h3 className={styles.card_title}>
               Create your brand’s loyal community
@@ -52,7 +64,13 @@ function Section() {
           </p>
         </div>
         <div className={styles.card}>
-          <img src="/card_img3.png" alt="image" width="312px" height="221px" />
+          <img
+            src={`${process.env.NEXT_PUBLIC_WEB_ASSETS_URL}/asset-17.jpg`}
+            alt="image"
+            width="312px"
+            height="221px"
+            className={styles.card_image}
+          />
           <div>
             <h3 className={styles.card_title}>
               Create your brand’s loyal community

@@ -1,49 +1,70 @@
 import React, { useState } from "react";
+import axios from "axios";
 
+import Dialog from "components/Common/Dialog";
+import setCookie from "hooks/setCookie";
+import getCookie from "hooks/getCookie";
+import removeCookie from "hooks/removeCookie";
 import styles from "./Home.module.css";
 
 function BookDemoForm() {
-  const [name, setName] = useState("");
-  const [company, setCompany] = useState("");
   const [email, setEmail] = useState("");
+  const [open, setOpen] = useState(false);
+  const [message, setMessage] = useState("");
 
-  function bookDemo(e) {
+  removeCookie("name");
+  setCookie("age", 21);
+  setTimeout(() => {
+    console.log("getCookie", getCookie("age"));
+  }, 1000);
+
+  function toggleOpen() {
+    setOpen((prevState) => !prevState);
+  }
+
+  async function bookDemo(e) {
     e.preventDefault();
-    console.log("name", name);
-    console.log("companyName", company);
-    console.log("emailId", email);
+    setOpen(true);
+    try {
+      const res = await axios.post("/api/leads", {
+        email: email,
+      });
+      if (res.data.success) {
+        console.log("res.data", res.data);
+        // setMessage(
+        //   <h4 className={styles.message}>
+        //     <p style={{ display: "inline", color: "green" }}>
+        //       Thanks for signing up.{" "}
+        //     </p>
+        //     We will send you latest news, updates and announcements.
+        //   </h4>
+        // );
+        setEmail("");
+      }
+    } catch ({ response }) {
+      console.log("response", response);
+      if (!response.data.success) {
+        setMessage(
+          <p className={styles.errMessage}>{response.statusText || ""}</p>
+        );
+        setEmail("");
+      }
+    }
   }
 
   return (
-    <div id="book-demo-form" className={`inner_wrapper mt-4 mb-4`}>
+    <div id="book-demo-form" className={`inner_wrapper mt-3 mb-3`}>
       <div className="center_align">
-        <h1 className="heading1">Book a demo</h1>
-        <p className="description1">lorem ipsum and supporting text</p>
+        <h1 className="heading2">Book a demo</h1>
+        <p className="description1 m-0">lorem ipsum and supporting text</p>
       </div>
       <div className={styles.form_wrapper}>
-        <form className={styles.form} name="bookDemoForm" onSubmit={bookDemo}>
-          <div className={styles.formGroup}>
-            <p className={styles.input_header}>Full Name</p>
-            <input
-              type="text"
-              className={styles.formControl}
-              name="name"
-              value={name}
-              onChange={(e) => setName(e.target.value)}
-              placeholder="Enter name"
-            />
-          </div>
-          <div className={styles.formGroup}>
-            <p className={styles.input_header}>Company Name</p>
-            <input
-              type="text"
-              className={styles.formControl}
-              name="company"
-              value={company}
-              onChange={(e) => setCompany(e.target.value)}
-              placeholder="Enter company name"
-            />
-          </div>
+        <form
+          name="bookDemoForm"
+          method="post"
+          className={styles.form}
+          onSubmit={bookDemo}
+        >
           <div className={styles.formGroup}>
             <p className={styles.input_header}>Work Email</p>
             <input
@@ -55,10 +76,16 @@ function BookDemoForm() {
               placeholder="Enter email address"
             />
           </div>
-          <button className="book_demo_btn mt-4" type="submit">
+          {message}
+          <button className="book_demo_btn mt-3" type="submit">
             Confirm
           </button>
         </form>
+        {open && (
+          <Dialog open={open} handleClose={(event) => toggleOpen(event)}>
+            <div className={styles.success_dialog}>Hi</div>
+          </Dialog>
+        )}
       </div>
     </div>
   );

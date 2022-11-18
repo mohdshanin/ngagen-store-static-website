@@ -21,7 +21,7 @@ function Header() {
     <div id="navbar" className={styles.header_wrapper}>
       <div className={styles.logo_container}>
         <img
-          src="/ngagen.svg"
+          src={`${process.env.NEXT_PUBLIC_WEB_ASSETS_URL_LOGOS}/logo-2.png`}
           alt="ngagen-logo"
           className={styles.ngagen_logo}
         />

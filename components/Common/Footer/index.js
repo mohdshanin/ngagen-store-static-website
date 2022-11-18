@@ -12,11 +12,11 @@ const footerSections = [
     subSections: [
       {
         label: "Tutorials",
-        url: "/tutorials",
+        url: "https://ngagen.com/tutorials",
       },
       {
         label: "F.A.Qs",
-        url: "/faqs",
+        url: "https://ngagen.com/faqs",
       },
       {
         label: "Blog",
@@ -29,19 +29,19 @@ const footerSections = [
     subSections: [
       {
         label: "About us",
-        url: "/about-us",
+        url: "https://ngagen.com/about-us",
       },
       {
         label: "Terms & Conditions",
-        url: "/terms",
+        url: "https://ngagen.com/terms",
       },
       {
         label: "Privacy Policy",
-        url: "/privacy",
+        url: "https://ngagen.com/privacy",
       },
       {
         label: "Refund Policy",
-        url: "/refund-policy",
+        url: "https://ngagen.com/refund-policy",
       },
     ],
   },
@@ -70,13 +70,17 @@ const socials = [
 ];
 
 function Footer() {
+  function redirect(url) {
+    window.open(url);
+  }
+
   return (
     <footer className={styles.container}>
       <div className={styles.section_wrapper}>
         <section className={styles.left_section}>
           <div className={styles.logo_container}>
             <img
-              src="/ngagen.svg"
+              src={`${process.env.NEXT_PUBLIC_WEB_ASSETS_URL_LOGOS}/logo-2.png`}
               alt="ngagen-logo"
               className={styles.ngagen_logo}
             />
@@ -111,8 +115,7 @@ function Footer() {
                     <div key={subSectionLabel}>
                       <a
                         className={styles.info_item}
-                        // href={subSectionUrl}
-                        onClick={() => {}}
+                        onClick={() => redirect(subSectionUrl)}
                       >
                         {subSectionLabel}
                       </a>

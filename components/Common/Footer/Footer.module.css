@@ -64,9 +64,10 @@
   font-weight: 400;
   font-size: 14px;
   margin: 0;
-  color: #98a2b3;
+  color: white;
   text-decoration: none;
   white-space: nowrap;
+  cursor: pointer;
 }
 
 .social_text {

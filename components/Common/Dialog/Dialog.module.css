@@ -1,0 +1,31 @@
+.dialog_container {
+  background: #161e29;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  width: 50%;
+  height: 50%;
+}
+.dialog {
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+}
+
+.closeButton {
+  position: absolute;
+  right: 5px;
+  top: 6px;
+}
+
+.close_icon {
+  background: transparent;
+  border: none;
+}
+
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

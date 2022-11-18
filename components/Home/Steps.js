@@ -45,10 +45,11 @@ function Steps() {
               className={styles.step1_img}
             />
           )}
-          <h2 className="heading2 m-0">
-            Create micro-influencers with Golden Tickets
-          </h2>
-          <h3 className="heading3">Generate word-of-mouth marketing by</h3>
+          <h2 className="heading2 m-0">Drive eyeballs with Collectible Ads</h2>
+          <h3 className="heading3">
+            Enable fans to display their love for your brand and reward them
+            with...
+          </h3>
           <p className={styles.step_attributes}>
             <LimitedIcon />
             Limited Edition Products
@@ -84,11 +85,10 @@ function Steps() {
               className={styles.step2_img}
             />
           )}
-          <h2 className="heading2 m-0">Drive eyeballs with Collectible Ads</h2>
-          <h3 className="heading3">
-            Enable fans to display their love for your brand and reward them
-            with...
-          </h3>
+          <h2 className="heading2 m-0">
+            Create micro-influencers with Golden Tickets
+          </h2>
+          <h3 className="heading3">Generate word-of-mouth marketing by</h3>
           <p className={styles.step_attributes}>
             <ExclusiveIcon />
             Access to Exclusive Experience

@@ -297,6 +297,10 @@
   max-width: 312px;
 }
 
+.card_image {
+  border-radius: 5px;
+}
+
 .icon_wrapper {
   display: flex;
   gap: 10px;
@@ -445,4 +449,11 @@
     font-size: 12px;
     padding: 8px;
   }
+}
+
+/* Success dialog */
+.success_dialog {
+  width: 100px;
+  height: 100px;
+  background: gray;
 }
