@@ -76,7 +76,7 @@ function BookDemoForm() {
         >
           <div className={styles.formGroup}>
             <p className={styles.input_header}>Work Email</p>
-            <div title={isDemoBooked ? "You already booked demo" : ""}>
+            <div title={isDemoBooked ? "You have already booked a demo" : ""}>
               <input
                 type="text"
                 className={styles.formControl}
@@ -96,7 +96,7 @@ function BookDemoForm() {
             type="submit"
             disabled={!email || isDemoBooked}
             className={`book_demo_btn mt-3 ${email ? "" : "disabled_button"}`}
-            title={isDemoBooked ? "You already booked demo" : ""}
+            title={isDemoBooked ? "You have already booked a demo" : ""}
           >
             Confirm
           </button>

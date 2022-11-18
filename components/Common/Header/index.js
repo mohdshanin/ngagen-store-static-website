@@ -51,7 +51,7 @@ function Header() {
           onClick={toDemoForm}
           disabled={isDemoBooked}
           className="book_demo_btn"
-          title={isDemoBooked ? "You already booked demo" : ""}
+          title={isDemoBooked ? "You have already booked a demo" : ""}
         >
           Book a demo
         </button>
