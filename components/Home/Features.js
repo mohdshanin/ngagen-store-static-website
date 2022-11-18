@@ -17,13 +17,13 @@ function Features() {
       <div className={styles.feature}>
         <div className={`img_wrapper ${styles.feature_img}`}>
           <img
-            src="/torus_wallet.svg"
+            src={`${process.env.NEXT_PUBLIC_WEB_ASSETS_URL}/website-assets/asset-14.jpg`}
             alt="image"
             width="auto"
             height={isSmallMobile ? "25px" : "35px"}
           />
           <img
-            src={`${process.env.NEXT_PUBLIC_WEB_ASSETS_URL}/asset-5.gif`}
+            src={`${process.env.NEXT_PUBLIC_WEB_ASSETS_URL}/website-assets/asset-5.gif`}
             alt="image"
             width="auto"
             height={isSmallMobile ? "40px" : "52px"}
@@ -44,13 +44,13 @@ function Features() {
         <div className={`img_wrapper ${styles.feature_img}`}>
           <div className="flex-row align-center">
             <img
-              src={`${process.env.NEXT_PUBLIC_WEB_ASSETS_URL}/asset-3.gif`}
+              src={`${process.env.NEXT_PUBLIC_WEB_ASSETS_URL}/website-assets/asset-3.gif`}
               alt="image"
               width="auto"
               height={isSmallMobile ? "70px" : "100px"}
             />
             <img
-              src={`${process.env.NEXT_PUBLIC_WEB_ASSETS_URL}/asset-1.gif`}
+              src={`${process.env.NEXT_PUBLIC_WEB_ASSETS_URL}/website-assets/asset-1.gif`}
               alt="image"
               width="auto"
               height={isSmallMobile ? "40px" : "52px"}
@@ -74,13 +74,13 @@ function Features() {
         <div className={`img_wrapper ${styles.feature_img}`}>
           <div className="flex-row relative">
             <img
-              src={`${process.env.NEXT_PUBLIC_WEB_ASSETS_URL}/asset-6.gif`}
+              src={`${process.env.NEXT_PUBLIC_WEB_ASSETS_URL}/website-assets/asset-6.gif`}
               alt="image"
               width="auto"
               height={isSmallMobile ? "70px" : "100px"}
             />
             <img
-              src={`${process.env.NEXT_PUBLIC_WEB_ASSETS_URL}/asset-2.gif`}
+              src={`${process.env.NEXT_PUBLIC_WEB_ASSETS_URL}/website-assets/asset-2.gif`}
               alt="image"
               width="auto"
               height={isSmallMobile ? "40px" : "52px"}
@@ -104,7 +104,7 @@ function Features() {
       <div className={styles.feature}>
         <div className={`img_wrapper ${styles.feature_img} flex-row`}>
           <img
-            src={`${process.env.NEXT_PUBLIC_WEB_ASSETS_URL}/asset-4.gif`}
+            src={`${process.env.NEXT_PUBLIC_WEB_ASSETS_URL}/website-assets/asset-4.gif`}
             alt="image"
             width="auto"
             height={isSmallMobile ? "85px" : "120px"}

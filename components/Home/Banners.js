@@ -7,7 +7,7 @@ function Banners() {
     <>
       <div className={styles.banner_wrapper}>
         <img
-          src={`${process.env.NEXT_PUBLIC_WEB_ASSETS_URL}/asset-8.jpg`}
+          src={`${process.env.NEXT_PUBLIC_WEB_ASSETS_URL}/website-assets/asset-8.jpg`}
           alt="banner1"
           width="100%"
           className={styles.banner1}
@@ -25,7 +25,7 @@ function Banners() {
       </div>
       <div className={styles.banner_wrapper}>
         <img
-          src={`${process.env.NEXT_PUBLIC_WEB_ASSETS_URL}/asset-7.png`}
+          src={`${process.env.NEXT_PUBLIC_WEB_ASSETS_URL}/website-assets/asset-7.png`}
           alt="banner2"
           width="100%"
           className={styles.banner2}

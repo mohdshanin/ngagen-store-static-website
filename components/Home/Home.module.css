@@ -297,6 +297,10 @@
   max-width: 312px;
 }
 
+.card_image {
+  border-radius: 5px;
+}
+
 .icon_wrapper {
   display: flex;
   gap: 10px;
@@ -405,6 +409,14 @@
 .formControl::-webkit-input-placeholder {
   color: black; /*Change the placeholder color*/
   opacity: 0.4; /*Change the opacity between 0 and 1*/
+}
+
+/* demo booked confirm dialog */
+.success_dialog {
+  display: flex;
+  flex-direction: column;
+  padding: 0 10% 5% 10%;
+  background: #161e29;
 }
 
 @media only screen and (max-width: 1200px) {

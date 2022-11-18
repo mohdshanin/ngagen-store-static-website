@@ -1,8 +1,11 @@
-import React, { useEffect } from "react";
+import React, { useState, useEffect } from "react";
+import Cookies from "js-cookie";
 
 import styles from "./Header.module.css";
 
 function Header() {
+  const [isDemoBooked, setIsDemoBooked] = useState("");
+
   useEffect(() => {
     var prevScrollpos = window.pageYOffset;
     const navbar = document.getElementById("navbar");
@@ -17,11 +20,24 @@ function Header() {
     };
   }, []);
 
+  useEffect(() => {
+    if (Cookies.get("email")) return setIsDemoBooked(Cookies.get("email"));
+    return setIsDemoBooked("");
+  }, [Cookies.get("email")]);
+
+  function toDemoForm() {
+    const element = document.getElementById("book-demo-form");
+    window.scrollTo({
+      behavior: element ? "smooth" : "auto",
+      top: element ? element.offsetTop : 0,
+    });
+  }
+
   return (
     <div id="navbar" className={styles.header_wrapper}>
       <div className={styles.logo_container}>
         <img
-          src="/ngagen.svg"
+          src={`${process.env.NEXT_PUBLIC_WEB_ASSETS_URL}/logos/logo-2.png`}
           alt="ngagen-logo"
           className={styles.ngagen_logo}
         />
@@ -30,9 +46,15 @@ function Header() {
         </p>
       </div>
       <div className={styles.btn_container}>
-        <a href="#book-demo-form" type="button" className="book_demo_btn">
+        <button
+          type="button"
+          onClick={toDemoForm}
+          disabled={isDemoBooked}
+          className="book_demo_btn"
+          title={isDemoBooked ? "You already booked demo" : ""}
+        >
           Book a demo
-        </a>
+        </button>
       </div>
     </div>
   );

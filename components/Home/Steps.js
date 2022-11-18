@@ -28,7 +28,7 @@ function Steps() {
         {!isMobile && (
           <div className={`img_wrapper ${styles.step_img_width}`}>
             <img
-              src={`${process.env.NEXT_PUBLIC_WEB_ASSETS_URL}/asset-12.png`}
+              src={`${process.env.NEXT_PUBLIC_WEB_ASSETS_URL}/website-assets/asset-12.png`}
               alt="image"
               width="auto"
               className={styles.step1_img}
@@ -39,16 +39,17 @@ function Steps() {
           <div className={styles.dot} />
           {isMobile && (
             <img
-              src={`${process.env.NEXT_PUBLIC_WEB_ASSETS_URL}/asset-12.png`}
+              src={`${process.env.NEXT_PUBLIC_WEB_ASSETS_URL}/website-assets/asset-12.png`}
               alt="image"
               width="auto"
               className={styles.step1_img}
             />
           )}
-          <h2 className="heading2 m-0">
-            Create micro-influencers with Golden Tickets
-          </h2>
-          <h3 className="heading3">Generate word-of-mouth marketing by</h3>
+          <h2 className="heading2 m-0">Drive eyeballs with Collectible Ads</h2>
+          <h3 className="heading3">
+            Enable fans to display their love for your brand and reward them
+            with...
+          </h3>
           <p className={styles.step_attributes}>
             <LimitedIcon />
             Limited Edition Products
@@ -67,7 +68,7 @@ function Steps() {
         {!isMobile && (
           <div className={`img_wrapper ${styles.step_img_width}`}>
             <img
-              src={`${process.env.NEXT_PUBLIC_WEB_ASSETS_URL}/asset-9.png`}
+              src={`${process.env.NEXT_PUBLIC_WEB_ASSETS_URL}/website-assets/asset-9.png`}
               alt="image"
               width="auto"
               className={styles.step2_img}
@@ -78,17 +79,16 @@ function Steps() {
           <div className={styles.dot} />
           {isMobile && (
             <img
-              src={`${process.env.NEXT_PUBLIC_WEB_ASSETS_URL}/asset-9.png`}
+              src={`${process.env.NEXT_PUBLIC_WEB_ASSETS_URL}/website-assets/asset-9.png`}
               alt="image"
               width="auto"
               className={styles.step2_img}
             />
           )}
-          <h2 className="heading2 m-0">Drive eyeballs with Collectible Ads</h2>
-          <h3 className="heading3">
-            Enable fans to display their love for your brand and reward them
-            with...
-          </h3>
+          <h2 className="heading2 m-0">
+            Create micro-influencers with Golden Tickets
+          </h2>
+          <h3 className="heading3">Generate word-of-mouth marketing by</h3>
           <p className={styles.step_attributes}>
             <ExclusiveIcon />
             Access to Exclusive Experience
@@ -107,7 +107,7 @@ function Steps() {
         {!isMobile && (
           <div className={`img_wrapper ${styles.step_img_width}`}>
             <img
-              src={`${process.env.NEXT_PUBLIC_WEB_ASSETS_URL}/asset-11.png`}
+              src={`${process.env.NEXT_PUBLIC_WEB_ASSETS_URL}/website-assets/asset-11.png`}
               alt="image"
               width="auto"
               className={styles.step3_img}
@@ -118,7 +118,7 @@ function Steps() {
           <div className={styles.dot} />
           {isMobile && (
             <img
-              src={`${process.env.NEXT_PUBLIC_WEB_ASSETS_URL}/asset-11.png`}
+              src={`${process.env.NEXT_PUBLIC_WEB_ASSETS_URL}/website-assets/asset-11.png`}
               alt="image"
               width="auto"
               className={styles.step3_img}
@@ -148,7 +148,7 @@ function Steps() {
         {!isMobile && (
           <div className={`img_wrapper ${styles.step_img_width}`}>
             <img
-              src={`${process.env.NEXT_PUBLIC_WEB_ASSETS_URL}/asset-10.png`}
+              src={`${process.env.NEXT_PUBLIC_WEB_ASSETS_URL}/website-assets/asset-10.png`}
               alt="image"
               width="auto"
               className={styles.step4_img}
@@ -159,7 +159,7 @@ function Steps() {
           <div className={styles.dot} />
           {isMobile && (
             <img
-              src={`${process.env.NEXT_PUBLIC_WEB_ASSETS_URL}/asset-10.png`}
+              src={`${process.env.NEXT_PUBLIC_WEB_ASSETS_URL}/website-assets/asset-10.png`}
               alt="image"
               width="auto"
               className={styles.step4_img}

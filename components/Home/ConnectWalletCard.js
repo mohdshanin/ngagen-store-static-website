@@ -1,11 +1,25 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import Cookies from "js-cookie";
 
 import useMobile from "hooks/useMobile";
-
 import styles from "./Home.module.css";
 
 function ConnectWalletCard() {
   const isMobile = useMobile("(max-width: 780px)");
+  const [isDemoBooked, setIsDemoBooked] = useState("");
+
+  useEffect(() => {
+    if (Cookies.get("email")) return setIsDemoBooked(Cookies.get("email"));
+    return setIsDemoBooked("");
+  }, [Cookies.get("email")]);
+
+  function toDemoForm() {
+    const element = document.getElementById("book-demo-form");
+    window.scrollTo({
+      behavior: element ? "smooth" : "auto",
+      top: element ? element.offsetTop : 0,
+    });
+  }
 
   return (
     <div className={styles.demo_card}>
@@ -28,24 +42,36 @@ function ConnectWalletCard() {
         </div>
         <div className={styles.demo_img_wrapper}>
           <img
-            src={`${process.env.NEXT_PUBLIC_WEB_ASSETS_URL}/asset-13.jpg`}
+            src={`${process.env.NEXT_PUBLIC_WEB_ASSETS_URL}/website-assets/asset-13.jpg`}
             alt="image"
             className={styles.card_img}
           />
           {!isMobile && (
             <div className={styles.btn_container}>
-              <a href="#book-demo-form" type="button" className="book_demo_btn">
+              <button
+                type="button"
+                onClick={toDemoForm}
+                disabled={isDemoBooked}
+                className="book_demo_btn"
+                title={isDemoBooked ? "You already booked demo" : ""}
+              >
                 Book a demo
-              </a>
+              </button>
             </div>
           )}
         </div>
       </div>
       {isMobile && (
         <div className={styles.btn_container}>
-          <a href="#book-demo-form" type="button" className="book_demo_btn">
+          <button
+            type="button"
+            onClick={toDemoForm}
+            disabled={isDemoBooked}
+            className="book_demo_btn"
+            title={isDemoBooked ? "You already booked demo" : ""}
+          >
             Book a demo
-          </a>
+          </button>
         </div>
       )}
     </div>
