@@ -103,13 +103,8 @@ function Footer() {
         <section className={styles.right_section}>
           <div className={styles.info_section}>
             {footerSections.map(({ label, subSections }) => (
-              <div
-                key={label}
-                className="display-flex flex-direction-column  mb-2"
-              >
-                <div className="mb-1">
-                  <h3 className={styles.header}>{label}</h3>
-                </div>
+              <div key={label} className="display-flex flex-direction-column">
+                <h3 className={styles.header}>{label}</h3>
                 {subSections.map(
                   ({ label: subSectionLabel, url: subSectionUrl }) => (
                     <div key={subSectionLabel}>
@@ -139,14 +134,18 @@ function Footer() {
       </div>
       <div className="flex justify-center">
         <div className={styles.copy_right}>
-          © All rights reserved. Developed & Owned by{" "}
-          <a
-            href="https://www.koinearth.com"
-            target="_blank"
-            className={styles.koinearth}
-          >
-            KoineArth
-          </a>
+          <p className="m-0 inline">© All rights reserved.</p>
+          <p className="m-0 inline no-wrap">
+            {" "}
+            Developed & Owned by{" "}
+            <a
+              href="https://www.koinearth.com"
+              target="_blank"
+              className={styles.koinearth}
+            >
+              KoineArth
+            </a>
+          </p>
         </div>
       </div>
     </footer>

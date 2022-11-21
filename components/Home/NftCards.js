@@ -10,41 +10,38 @@ import styles from "./Home.module.css";
 
 function Section() {
   return (
-    <div className="inner_wrapper">
-      <div className="center_align">
+    <section className="inner_wrapper">
+      <header className="center_align">
         <h1 className="heading1">Real world NFT Experiences</h1>
-      </div>
+      </header>
       <div className={styles.card_carousel}>
         <div className={styles.card}>
           <img
             src={`${process.env.NEXT_PUBLIC_WEB_ASSETS_URL}/website-assets/asset-15.jpg`}
             alt="image"
-            width="312px"
-            height="221px"
             className={styles.card_image}
           />
           <div>
-            <h3 className={styles.card_title}>
-              Create your brand’s loyal community
-            </h3>
+            <h3 className={styles.card_title}>ABOVE THE GOLDEN CLOUDS</h3>
             <div className={styles.icon_wrapper}>
               <LimitedIcon width="24" height="24" />
               <ExclusiveIcon width="24" height="24" />
               <CoCreateIcon width="24" height="24" />
             </div>
           </div>
-          <h3 className={styles.card_header}>Header</h3>
-          <p className={styles.card_description}>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua.{" "}
-          </p>
+          <summary className={styles.card_header}>Consumer Brands</summary>
+          <div className={styles.card_description}>
+            <p className="mt-0">Digital Art inspired by Architecture NFT</p>
+            <p>
+              holders get home improvement consultation and gift vouchers from
+              select partners
+            </p>
+          </div>
         </div>
         <div className={styles.card}>
           <img
             src={`${process.env.NEXT_PUBLIC_WEB_ASSETS_URL}/website-assets/asset-16.jpg`}
             alt="image"
-            width="312px"
-            height="221px"
             className={styles.card_image}
           />
           <div>
@@ -57,18 +54,19 @@ function Section() {
               <PhygitalIcon width="24" height="24" />
             </div>
           </div>
-          <h3 className={styles.card_header}>Header</h3>
-          <p className={styles.card_description}>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua.{" "}
-          </p>
+          <summary className={styles.card_header}>Sports</summary>
+          <div className={styles.card_description}>
+            <p className="mt-0">Digital player cards</p>
+            <p>
+              NFT holders get access to physical jerseys, reward points & win
+              gift vouchers
+            </p>
+          </div>
         </div>
         <div className={styles.card}>
           <img
             src={`${process.env.NEXT_PUBLIC_WEB_ASSETS_URL}/website-assets/asset-17.jpg`}
             alt="image"
-            width="312px"
-            height="221px"
             className={styles.card_image}
           />
           <div>
@@ -78,15 +76,18 @@ function Section() {
             <div className={styles.icon_wrapper}>
               <FanIcon width="26" height="26" />
             </div>
-            <h3 className={styles.card_header}>Header</h3>
-            <p className={styles.card_description}>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua.{" "}
-            </p>
+            <summary className={styles.card_header}>Gaming</summary>
+            <div className={styles.card_description}>
+              <p className="mt-0">Digital Trophies</p>
+              <p>
+                Top performers can showcase their achievemnts on Facebook and
+                Instagram
+              </p>
+            </div>
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 }
 

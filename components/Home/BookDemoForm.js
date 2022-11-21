@@ -62,11 +62,10 @@ function BookDemoForm() {
   }
 
   return (
-    <div id="book-demo-form" className="inner_wrapper mt-3 mb-3">
-      <div className="center_align">
+    <section id="book-demo-form" className="inner_wrapper mt-3 mb-3">
+      <header className="center_align">
         <h1 className="heading2">Book a demo</h1>
-        <p className="description1 m-0">lorem ipsum and supporting text</p>
-      </div>
+      </header>
       <div className={styles.form_wrapper}>
         <form
           name="bookDemoForm"
@@ -116,7 +115,7 @@ function BookDemoForm() {
           </Dialog>
         )}
       </div>
-    </div>
+    </section>
   );
 }
 

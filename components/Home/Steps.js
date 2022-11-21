@@ -19,11 +19,11 @@ function Steps() {
   const isMobile = useMobile("(max-width: 600px)");
 
   return (
-    <div className="inner_wrapper">
-      <div className="center_align pb-4">
+    <section className="inner_wrapper">
+      <header className="center_align pb-4">
         <h1 className="heading1">Deploy Innovative Marketing Campaings</h1>
         <p className="description1">Engage your Brand’s Community</p>
-      </div>
+      </header>
       <div className={styles.step_wrapper}>
         {!isMobile && (
           <div className={`img_wrapper ${styles.step_img_width}`}>
@@ -45,11 +45,11 @@ function Steps() {
               className={styles.step1_img}
             />
           )}
-          <h2 className="heading2 m-0">Drive eyeballs with Collectible Ads</h2>
-          <h3 className="heading3">
+          <h2 className="heading2 mt-0">Drive eyeballs with Collectible Ads</h2>
+          <summary className="heading3">
             Enable fans to display their love for your brand and reward them
             with...
-          </h3>
+          </summary>
           <p className={styles.step_attributes}>
             <LimitedIcon />
             Limited Edition Products
@@ -85,21 +85,23 @@ function Steps() {
               className={styles.step2_img}
             />
           )}
-          <h2 className="heading2 m-0">
+          <h2 className="heading2 mt-0">
             Create micro-influencers with Golden Tickets
           </h2>
-          <h3 className="heading3">Generate word-of-mouth marketing by</h3>
+          <summary className="heading3">
+            Generate word-of-mouth marketing by
+          </summary>
           <p className={styles.step_attributes}>
             <ExclusiveIcon />
             Access to Exclusive Experience
           </p>
           <p className={styles.step_attributes}>
             <FanIcon width="18" height="18" />
-            Fan Meet
+            Enabling Fan Meet
           </p>
           <p className={styles.step_attributes}>
             <ProofIcon />
-            Proof of Attendance Protocol (PoaP)
+            Issuing Proof of Attendance as memorabalia
           </p>
         </div>
       </div>
@@ -124,23 +126,23 @@ function Steps() {
               className={styles.step3_img}
             />
           )}
-          <h2 className="heading2 m-0">
-            Recognize creators with Digital Trophies
+          <h2 className="heading2 mt-0">
+            Recognize brand ambassdors with Digital Trophies
           </h2>
-          <h3 className="heading3">
+          <summary className="heading3">
             Engage with the creator economy to extend your brand
-          </h3>
+          </summary>
           <p className={styles.step_attributes}>
             <RecognizeIcon />
-            Recognize Creator
+            Recognize Top Creators & Contributors
           </p>
           <p className={styles.step_attributes}>
             <CoCreateIcon />
-            Co-Create Content, product extensions, fan fiction
+            Enable co-creation of content and product extension
           </p>
           <p className={styles.step_attributes}>
             <FeaturedIcon />
-            Featuring You on website, social media, ads
+            Feature brand ambasdors on your website, social media, ads
           </p>
         </div>
       </div>
@@ -165,10 +167,12 @@ function Steps() {
               className={styles.step4_img}
             />
           )}
-          <h2 className="heading2 m-0">
+          <h2 className="heading2 mt-0">
             Reinforce Loyalty with Community Membership
           </h2>
-          <h3 className="heading3">Create your brand’s loyal community</h3>
+          <summary className="heading3">
+            Create your brand’s loyal community which gets
+          </summary>
           <p className={styles.step_attributes}>
             <EarlyAccessIcon /> Early access to new products
           </p>
@@ -178,11 +182,11 @@ function Steps() {
           </p>
           <p className={styles.step_attributes}>
             <VoteIcon />
-            Vote on brand decisions
+            Right to Vote on brand decisions
           </p>
         </div>
       </div>
-    </div>
+    </section>
   );
 }
 

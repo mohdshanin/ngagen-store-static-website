@@ -4,7 +4,7 @@ import styles from "./Home.module.css";
 
 function Section() {
   return (
-    <div className={styles.section_wrapper}>
+    <section className={styles.section_wrapper}>
       <div className={styles.section_item}>
         <h1 className="heading3">Custom Store</h1>
         <p className="description2">
@@ -25,7 +25,7 @@ function Section() {
           Personalize offers and experience based on what NFTs a user holds
         </p>
       </div>
-    </div>
+    </section>
   );
 }
 
