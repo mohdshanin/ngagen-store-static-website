@@ -357,6 +357,7 @@
   border-radius: 10px;
   background: #151515;
   max-width: 312px;
+  margin: auto;
 }
 
 .card_image {

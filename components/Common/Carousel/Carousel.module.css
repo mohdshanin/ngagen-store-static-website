@@ -1,0 +1,31 @@
+.carousel_container {
+  display: grid;
+  grid-template-columns: repeat(3, 100%);
+  overflow: hidden;
+}
+
+.button_Wrapper {
+  width: 100%;
+  position: relative;
+  left: 50%;
+  transform: translate(-50%);
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+  padding-left: 16px;
+  padding-right: 16px;
+  gap: 6px;
+}
+
+.button {
+  border-radius: 50%;
+  width: 4px;
+  height: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+  opacity: 0.2;
+}
+
+.selected {
+  opacity: 1;
+}
