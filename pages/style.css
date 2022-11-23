@@ -144,7 +144,7 @@ body {
 .heading3 {
   font-weight: 700;
   font-size: 16px;
-  line-height: 32px;
+  line-height: 28px;
 }
 
 .description1 {
@@ -208,7 +208,7 @@ body {
   }
   .heading3 {
     font-size: 15px;
-    line-height: 28px;
+    line-height: 24px;
   }
   .description1 {
     font-size: 14px;
@@ -243,7 +243,7 @@ body {
   }
   .heading3 {
     font-size: 14px;
-    line-height: 24 px;
+    line-height: 20px;
   }
   .description1 {
     font-size: 12px;
@@ -277,6 +277,14 @@ body {
 
 .hidden {
   display: none;
+}
+
+.visible {
+  visibility: visible;
+}
+
+.invisible {
+  visibility: hidden;
 }
 
 .relative {
@@ -313,6 +321,10 @@ body {
 
 .width-fit {
   width: fit-content;
+}
+
+.no-wrap {
+  white-space: nowrap;
 }
 
 .p-0 {
