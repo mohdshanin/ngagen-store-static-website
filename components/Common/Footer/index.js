@@ -4,6 +4,7 @@ import FacebookIcon from "components/Common/Icons/Facebook";
 import TwitterIcon from "components/Common/Icons/Twitter";
 import InstagramIcon from "components/Common/Icons/Instagram";
 import DiscordIcon from "components/Common/Icons/Discord";
+import YoutubeIcon from "components/Common/Icons/Youtube";
 import styles from "./Footer.module.css";
 
 const footerSections = [
@@ -66,6 +67,11 @@ const socials = [
     url: "https://discord.gg/dfwR4dvbj3",
     icon: <DiscordIcon />,
     label: "discord",
+  },
+  {
+    url: "https://www.youtube.com/@koinearth2531/featured",
+    icon: <YoutubeIcon />,
+    label: "youtube",
   },
 ];
 

@@ -2,7 +2,7 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  padding: 30px 50px;
+  padding: 0px 50px;
   gap: 20px;
   border-top: 1px solid grey;
 }
@@ -16,7 +16,6 @@
 .left_section {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
 }
 
 .logo_container {
