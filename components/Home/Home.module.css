@@ -2,11 +2,10 @@
 .banner_wrapper {
   width: 100%;
   position: relative;
-  margin-top: 40px
+  margin-top: 76px;
 }
 
 .banner1 {
-  margin-top: 50px;
   object-fit: cover;
   height: 600px;
 }
