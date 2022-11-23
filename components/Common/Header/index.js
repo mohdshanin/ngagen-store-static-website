@@ -34,19 +34,14 @@ function Header() {
   }
 
   return (
-    <nav id="navbar" className={styles.header_wrapper}>
-      <header className={styles.logo_container}>
+    <header id="navbar" className={styles.header_wrapper}>
+      <nav className={styles.logo_container}>
         <img
-          src={`${process.env.NEXT_PUBLIC_WEB_ASSETS_URL}/logos/logo-2.png`}
+          src={`${process.env.NEXT_PUBLIC_WEB_ASSETS_URL}/logos/logo-1.png`}
           alt="ngagen-logo"
           className={styles.ngagen_logo}
         />
-        <h3
-          className={`${styles.ngagen_logo_text} orange-background text-mask`}
-        >
-          ngageN
-        </h3>
-      </header>
+      </nav>
       <div className={styles.btn_container}>
         <button
           type="button"
@@ -58,7 +53,7 @@ function Header() {
           Book a demo
         </button>
       </div>
-    </nav>
+    </header>
   );
 }
 
