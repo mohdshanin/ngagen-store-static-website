@@ -77,7 +77,7 @@ function BookDemoForm() {
             <p className={styles.input_header}>Work Email</p>
             <div title={isDemoBooked ? "You have already booked a demo" : ""}>
               <input
-                type="text"
+                type="email"
                 className={styles.formControl}
                 name="email"
                 value={email}
