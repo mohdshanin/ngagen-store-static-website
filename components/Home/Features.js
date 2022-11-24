@@ -31,11 +31,11 @@ function Features() {
             />
           </div>
           <div className={styles.feature_text}>
-            <h2 className="heading2">Easy Sign-Up</h2>
-            <summary className="heading3">
+            <h2 className="heading1">Easy Sign-Up</h2>
+            <summary className={styles.summary_text}>
               Simplest user experience for you and your customers.
             </summary>
-            <p className="description2">
+            <p className={styles.summary_text}>
               Sign up with your email address.
               <br /> Simple wallet set-up
             </p>
@@ -59,13 +59,13 @@ function Features() {
             </div>
           </div>
           <div className={styles.feature_text}>
-            <h2 className="heading2">
+            <h2 className="heading1">
               User Experience that everyone understands
             </h2>
-            <summary className="heading3">
+            <summary className={styles.summary_text}>
               Seamless User Experience for crypto-natives and the other 99%
             </summary>
-            <p className="description2">
+            <p className={styles.summary_text}>
               Pay with Credit, Debit Cards.
               <br /> E-commerce like user experience that customers are used to
             </p>
@@ -90,11 +90,11 @@ function Features() {
             </div>
           </div>
           <div className={`${styles.feature_text}`}>
-            <h2 className="heading2">Built in Global eKYC</h2>
-            <summary className="heading3">
+            <h2 className="heading1">Built in Global eKYC</h2>
+            <summary className={styles.summary_text}>
               Easy customer onboarding while staying compliant
             </summary>
-            <p className="description2">
+            <p className={styles.summary_text}>
               Instant Identity Verification
               <br /> Across the Globe
             </p>
@@ -110,11 +110,11 @@ function Features() {
             />
           </div>
           <div className={styles.feature_text}>
-            <h2 className="heading2">Self Use for your Team</h2>
-            <summary className="heading3">
-              Launch NFTs aligned with your marketing campaings
+            <h2 className="heading1">Self Use for your Team</h2>
+            <summary className={styles.summary_text}>
+              Launch NFTs aligned with your marketing campaigns
             </summary>
-            <p className="description2">
+            <p className={styles.summary_text}>
               Create, Sell, Award NFTs when you want, in real time
               <br />
               Separate logins for team members

@@ -12,7 +12,7 @@
 
 .banner2 {
   height: 430px;
-  background-image: url(https://cdn.ngagen.team/ngagen-store-static-staging/website-assets/asset-7.png);
+  background-image: url('https://cdn.ngagen.team/ngagen-store-static-staging/website-assets/asset-7.png');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: -10%;
@@ -23,6 +23,10 @@
   bottom: 0;
   left: 3%;
   z-index: 10;
+}
+
+.header_banner_text {
+  bottom: -64px
 }
 
 .banner_text .banner_description {
@@ -48,7 +52,7 @@
 @media only screen and (max-width: 780px) {
   .banner1 {
     margin-top: 0;
-    height: 350px;
+    height: 430px;
   }
   .banner2 {
     height: 270px;
@@ -60,15 +64,19 @@
 
 @media only screen and (max-width: 410px) {
   .banner1 {
-    height: 280px;
+    height: 430px;
   }
   .banner2 {
-    height: 250px;
+    height: 335px;
+    background-size: contain;
   }
   .banner_text .banner_description {
     font-size: 13px;
     padding-bottom: 1%;
   }
+    .banner_wrapper {
+      margin-top: 15px;
+    }
 }
 
 /* Section styles */
@@ -152,6 +160,12 @@
   width: 80%;
 }
 
+.summary_text {
+  font-weight: 400;
+  font-size: 20px;
+  margin-top: 12px;
+}
+
 @media only screen and (max-width: 780px) {
   .feature {
     margin: 40px 0;
@@ -169,6 +183,9 @@
   }
   .feature_img div {
     padding-left: 20px;
+  }
+  .summary_text {
+    font-size: 14px;
   }
 }
 
@@ -311,11 +328,11 @@
   background-repeat: no-repeat;
 }
 
-.gradientBg {
+/* .gradientBg {
   background-image: url('https://cdn.ngagen.team/ngagen-store-static-staging/website-assets/asset-18.png');
   background-size: 100% 100%;
   background-repeat: no-repeat;
-}
+} */
 
 @media only screen and (max-width: 780px) {
   .step1_img {
@@ -354,7 +371,7 @@
   }
 
   .oneClick {
-    background-image: url('https://cdn.ngagen.team/ngagen-store-static-staging/website-assets/asset-19.png');
+    background-image: url('https://cdn.ngagen.team/ngagen-store-static-staging/website-assets/asset-21.png');
     background-size: 100% 100%;
     background-repeat: no-repeat;
   }

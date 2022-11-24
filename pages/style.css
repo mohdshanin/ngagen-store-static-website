@@ -56,6 +56,8 @@ body {
   z-index: -999;
   white-space: wrap;
   overflow-x: hidden;
+  background-image: url('https://cdn.ngagen.team/ngagen-store-static-staging/website-assets/asset-22.jpg');
+  background-size: 100% 100%;
 }
 
 .text-mask {
@@ -194,7 +196,15 @@ body {
   cursor: default;
 }
 
+.text-align-center {
+  text-align: center;
+}
+
 @media only screen and (max-width: 780px) {
+  body {
+    background-image: url('https://cdn.ngagen.team/ngagen-store-static-staging/website-assets/asset-23.jpg');
+    background-size: 100% 100%;
+  }
   .inner_wrapper {
     padding: 30px 15px 0;
   }
@@ -258,9 +268,9 @@ body {
     padding: 0 10px;
   }
   .book_demo_btn {
-    font-size: 12px;
+    font-size: 16px;
     line-height: 24px;
-    padding: 5px 15px;
+    padding: 12px 49px;
   }
 }
 

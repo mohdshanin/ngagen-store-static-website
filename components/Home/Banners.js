@@ -7,13 +7,17 @@ function Banners() {
     <>
       <div className={styles.banner_wrapper}>
         <img
-          src={`${process.env.NEXT_PUBLIC_WEB_ASSETS_URL}/website-assets/asset-8.jpg`}
+          src={
+            "https://cdn.ngagen.team/ngagen-store-static-staging/website-assets/asset-8.jpg"
+          }
           alt="banner1"
           width="100%"
           className={styles.banner1}
         />
         <div className={`${styles.banner_shadow} shadow-background`} />
-        <header className={styles.banner_text}>
+        <header
+          className={`${styles.banner_text} ${styles.header_banner_text}`}
+        >
           <h1 className="heading1">
             NFT-Powered <br />
             Marketing platform for Brands

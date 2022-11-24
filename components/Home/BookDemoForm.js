@@ -74,7 +74,7 @@ function BookDemoForm() {
           onSubmit={bookDemo}
         >
           <div className={styles.formGroup}>
-            <p className={styles.input_header}>Work Email</p>
+            <p className={styles.input_header}>Email Address</p>
             <div title={isDemoBooked ? "You have already booked a demo" : ""}>
               <input
                 type="email"

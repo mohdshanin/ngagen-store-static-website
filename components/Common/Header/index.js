@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from "react";
 import Cookies from "js-cookie";
 
+import useMobile from "hooks/useMobile";
 import styles from "./Header.module.css";
 
 function Header() {
+  const isMobile = useMobile("(max-width: 780px)");
   const [isDemoBooked, setIsDemoBooked] = useState("");
 
   useEffect(() => {
@@ -36,11 +38,20 @@ function Header() {
   return (
     <header id="navbar" className={styles.header_wrapper}>
       <nav className={styles.logo_container}>
-        <img
-          src={`${process.env.NEXT_PUBLIC_WEB_ASSETS_URL}/logos/logo-1.png`}
-          alt="ngagen-logo"
-          className={styles.ngagen_logo}
-        />
+        {!isMobile && (
+          <img
+            src={`${process.env.NEXT_PUBLIC_WEB_ASSETS_URL}/logos/logo-1.png`}
+            alt="ngagen-logo"
+            className={styles.ngagen_logo}
+          />
+        )}
+        {isMobile && (
+          <img
+            src={`${process.env.NEXT_PUBLIC_WEB_ASSETS_URL}/logos/logo-2.png`}
+            alt="ngagen-logo"
+            className={styles.ngagen_logo}
+          />
+        )}
       </nav>
       <div className={styles.btn_container}>
         <button
