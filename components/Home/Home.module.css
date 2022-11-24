@@ -206,6 +206,8 @@
   background: #161e29;
   border-radius: 2rem;
   overflow: hidden;
+  transform: rotate(360deg);
+  background-image: var(--mix-gradient-dark);
 }
 
 .demo_card_background {
@@ -242,7 +244,8 @@
 .btn_container {
   display: flex;
   align-items: center;
-  margin-top: 10%;
+  margin-top: 20px;
+  cursor: pointer;
 }
 
 @media only screen and (max-width: 780px) {

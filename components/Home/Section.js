@@ -24,7 +24,7 @@ const bannersData = [
 const sectionsData = [
   {
     title: "Custom Store",
-    desc: "Customize the user experience to seamlessly embed NFTs on your existting website",
+    desc: "Customize the user experience to seamlessly embed NFTs on your existing website",
   },
   {
     title: "Token Gated Commerce",

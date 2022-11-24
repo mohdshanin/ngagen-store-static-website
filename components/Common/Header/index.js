@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import Cookies from "js-cookie";
 
 import useMobile from "hooks/useMobile";
 import styles from "./Header.module.css";
@@ -25,11 +24,6 @@ function Header() {
       prevScrollpos = currentScrollPos;
     };
   }, []);
-
-  useEffect(() => {
-    if (Cookies.get("email")) return setIsDemoBooked(Cookies.get("email"));
-    return setIsDemoBooked("");
-  }, [Cookies.get("email")]);
 
   function toDemoForm() {
     const element = document.getElementById("book-demo-form");
