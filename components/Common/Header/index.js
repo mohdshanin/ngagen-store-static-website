@@ -13,7 +13,9 @@ function Header() {
     const navbar = document.getElementById("navbar");
     window.onscroll = function () {
       var currentScrollPos = window.pageYOffset;
+      console.log("currentScrollPos: ", currentScrollPos);
       if (currentScrollPos === 0) {
+        console.log("inside");
         prevScrollpos = currentScrollPos;
         return;
       }
