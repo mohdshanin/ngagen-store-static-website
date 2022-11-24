@@ -1,26 +1,18 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import Cookies from "js-cookie";
 
 import Dialog from "components/Common/Dialog";
 import HeartIcon from "components/Common/Icons/Heart";
-import setCookie from "hooks/setCookie";
 import styles from "./Home.module.css";
 
 function BookDemoForm() {
   const [email, setEmail] = useState("");
   const [open, setOpen] = useState(false);
-  const [isDemoBooked, setIsDemoBooked] = useState("");
   const [errorMessage, setErrorMessage] = useState("");
 
   function toggleOpen() {
     setOpen((prevState) => !prevState);
   }
-
-  useEffect(() => {
-    if (Cookies.get("email")) return setIsDemoBooked(Cookies.get("email"));
-    return setIsDemoBooked("");
-  }, [Cookies.get("email")]);
 
   async function bookDemo(e) {
     e.preventDefault();
@@ -45,7 +37,6 @@ function BookDemoForm() {
           <p className="description2">Demo already booked for this email</p>
         );
       } else {
-        setCookie("email", email);
         setOpen(true);
         setEmail("");
       }
@@ -75,7 +66,7 @@ function BookDemoForm() {
         >
           <div className={styles.formGroup}>
             <p className={styles.input_header}>Email Address</p>
-            <div title={isDemoBooked ? "You have already booked a demo" : ""}>
+            <div>
               <input
                 type="email"
                 className={styles.formControl}
@@ -85,17 +76,15 @@ function BookDemoForm() {
                   setEmail(e.target.value);
                   setErrorMessage("");
                 }}
-                placeholder={isDemoBooked || "Enter email address"}
-                disabled={isDemoBooked}
+                placeholder={"Enter email address"}
               />
             </div>
           </div>
           {errorMessage}
           <button
             type="submit"
-            disabled={!email || isDemoBooked}
+            disabled={!email}
             className={`book_demo_btn mt-3 ${email ? "" : "disabled_button"}`}
-            title={isDemoBooked ? "You have already booked a demo" : ""}
           >
             Confirm
           </button>
@@ -104,10 +93,6 @@ function BookDemoForm() {
           <Dialog open={open} handleClose={(event) => toggleOpen(event)}>
             <div className={styles.success_dialog}>
               <h2 className="heading2">Demo Booked</h2>
-              <p className="description1">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod
-              </p>
               <HeartIcon className="mt-2 mb-2" width="auto" height={100} />
               <h2 className="heading2">Thank you for your interest!</h2>
               <h3 className="heading3">We will contact you shortly</h3>

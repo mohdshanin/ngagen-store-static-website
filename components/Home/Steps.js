@@ -106,7 +106,7 @@ function Steps() {
             </p>
             <p className={styles.step_attributes}>
               <ProofIcon />
-              Issuing Proof of Attendance as memorabalia
+              Issuing Proof of Attendance as Memorabilia
             </p>
           </div>
         </div>
@@ -132,7 +132,7 @@ function Steps() {
               />
             )}
             <h2 className="heading2 mt-0">
-              Recognize brand ambassdors with Digital Trophies
+              Recognize brand ambassadors with Digital Trophies
             </h2>
             <summary className="heading3">
               Engage with the creator economy to extend your brand
@@ -147,7 +147,7 @@ function Steps() {
             </p>
             <p className={styles.step_attributes}>
               <FeaturedIcon />
-              Feature brand ambasdors on your website, social media, ads
+              Feature brand ambassadors on your website, social media, ads
             </p>
           </div>
         </div>

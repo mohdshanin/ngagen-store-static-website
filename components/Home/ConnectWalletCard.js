@@ -1,17 +1,10 @@
 import React, { useState, useEffect } from "react";
-import Cookies from "js-cookie";
 
 import useMobile from "hooks/useMobile";
 import styles from "./Home.module.css";
 
 function ConnectWalletCard() {
   const isMobile = useMobile("(max-width: 780px)");
-  const [isDemoBooked, setIsDemoBooked] = useState("");
-
-  useEffect(() => {
-    if (Cookies.get("email")) return setIsDemoBooked(Cookies.get("email"));
-    return setIsDemoBooked("");
-  }, [Cookies.get("email")]);
 
   function toDemoForm() {
     const element = document.getElementById("book-demo-form");
@@ -47,35 +40,13 @@ function ConnectWalletCard() {
               alt="image"
               className={styles.card_img}
             />
-            {!isMobile && (
-              <div className={styles.btn_container}>
-                <button
-                  type="button"
-                  onClick={toDemoForm}
-                  disabled={isDemoBooked}
-                  className="book_demo_btn"
-                  title={isDemoBooked ? "You have already booked a demo" : ""}
-                >
-                  Book a demo
-                </button>
-              </div>
-            )}
           </div>
         </div>
-        {isMobile && (
-          <div className={styles.btn_container}>
-            <button
-              type="button"
-              onClick={toDemoForm}
-              disabled={isDemoBooked}
-              className="book_demo_btn"
-              title={isDemoBooked ? "You have already booked a demo" : ""}
-            >
-              Book a demo
-            </button>
-          </div>
-        )}
-        <div className={`${styles.demo_card_background}`} />
+        <div className={styles.btn_container}>
+          <button type="button" onClick={toDemoForm} className="book_demo_btn">
+            Book a demo
+          </button>
+        </div>
       </div>
     </article>
   );

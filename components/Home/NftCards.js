@@ -17,7 +17,7 @@ const nftCardsData = [
     heading: "Consumer Brands",
     desc1: "Digital Art inspired by Architecture NFT",
     desc2:
-      "holders get home improvement consultation and gift vouchers from select partners",
+      "NFT holders get home improvement consultation and gift vouchers from select partners",
   },
   {
     asset: "video-2.mp4",
@@ -33,7 +33,7 @@ const nftCardsData = [
     heading: "Gaming",
     desc1: "Digital Trophies",
     desc2:
-      "Top performers can showcase their achievemnts on Facebook and Instagram",
+      "Top performers can showcase their achievements on Facebook and Instagram",
   },
 ];
 
