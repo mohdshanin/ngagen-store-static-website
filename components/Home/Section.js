@@ -189,6 +189,7 @@ function BannerCarousel({
               <div
                 className={styles.section_item}
                 onClick={() => changeSlide({ slide: index })}
+                key={title}
               >
                 <h1 className="heading3">{title}</h1>
                 <p className="description2">{desc}</p>

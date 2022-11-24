@@ -13,7 +13,7 @@ function Header() {
     const navbar = document.getElementById("navbar");
     window.onscroll = function () {
       var currentScrollPos = window.pageYOffset;
-      if (currentScrollPos === 0) {
+      if (currentScrollPos <= 0) {
         prevScrollpos = currentScrollPos;
         return;
       }
@@ -39,9 +39,16 @@ function Header() {
     });
   }
 
+  function navigateToTop() {
+    window.scrollTo({
+      behavior: "smooth",
+      top: 0,
+    });
+  }
+
   return (
     <header id="navbar" className={styles.header_wrapper}>
-      <nav style={{ position: "sticky" }} className={styles.logo_container}>
+      <nav onClick={navigateToTop} className={styles.logo_container}>
         {!isMobile && (
           <img
             src={`${process.env.NEXT_PUBLIC_WEB_ASSETS_URL}/logos/logo-1.png`}

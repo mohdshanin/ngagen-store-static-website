@@ -17,6 +17,7 @@
   display: flex;
   align-items: center;
   padding-left: 32px;
+  cursor: pointer;
 }
 
 .ngagen_logo {
