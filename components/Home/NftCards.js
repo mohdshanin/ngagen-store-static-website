@@ -58,11 +58,6 @@ function Section() {
             <source src="movie.ogg" type="video/ogg" />
             Your browser does not support the video tag.
           </video>
-          {/* <img
-            src={`${process.env.NEXT_PUBLIC_WEB_ASSETS_URL}/website-assets/${image}`}
-            alt="image"
-            className={styles.card_image}
-          /> */}
           <div>
             <h3 className={styles.card_title}>{title}</h3>
             <div className={styles.icon_wrapper}>
@@ -109,11 +104,6 @@ function Section() {
                 <source src="movie.ogg" type="video/ogg" />
                 Your browser does not support the video tag.
               </video>
-              {/* <img
-                src={`${process.env.NEXT_PUBLIC_WEB_ASSETS_URL}/website-assets/${image}`}
-                alt="image"
-                className={styles.card_image}
-              /> */}
               <div>
                 <h3 className={styles.card_title}>{title}</h3>
                 <div className={styles.icon_wrapper}>
