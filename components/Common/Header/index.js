@@ -13,6 +13,10 @@ function Header() {
     const navbar = document.getElementById("navbar");
     window.onscroll = function () {
       var currentScrollPos = window.pageYOffset;
+      if (currentScrollPos === 0) {
+        prevScrollpos = currentScrollPos;
+        return;
+      }
       if (prevScrollpos > currentScrollPos) {
         navbar.style.top = "0";
       } else {
@@ -37,7 +41,7 @@ function Header() {
 
   return (
     <header id="navbar" className={styles.header_wrapper}>
-      <nav className={styles.logo_container}>
+      <nav style={{ position: "sticky" }} className={styles.logo_container}>
         {!isMobile && (
           <img
             src={`${process.env.NEXT_PUBLIC_WEB_ASSETS_URL}/logos/logo-1.png`}
