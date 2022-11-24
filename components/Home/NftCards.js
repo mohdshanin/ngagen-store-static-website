@@ -12,7 +12,7 @@ import styles from "./Home.module.css";
 
 const nftCardsData = [
   {
-    image: "asset-15.jpg",
+    asset: "video-1.mp4",
     title: "ABOVE THE GOLDEN CLOUDS",
     heading: "Consumer Brands",
     desc1: "Digital Art inspired by Architecture NFT",
@@ -20,7 +20,7 @@ const nftCardsData = [
       "holders get home improvement consultation and gift vouchers from select partners",
   },
   {
-    image: "asset-16.jpg",
+    asset: "video-2.mp4",
     title: "Create your brand’s loyal community",
     heading: "Sports",
     desc1: "Digital player cards",
@@ -28,7 +28,7 @@ const nftCardsData = [
       "NFT holders get access to physical jerseys, reward points & win gift vouchers",
   },
   {
-    image: "asset-17.jpg",
+    asset: "video-3.mp4",
     title: "Create your brand’s loyal community",
     heading: "Gaming",
     desc1: "Digital Trophies",
@@ -41,15 +41,28 @@ function Section() {
   const isTablet = useMobile("(max-width: 1143px)");
 
   const nftCarousel =
-    nftCardsData?.map(({ image, title, heading, desc1, desc2 }, index) => ({
+    nftCardsData?.map(({ asset, title, heading, desc1, desc2 }, index) => ({
       id: title,
       child: (
         <div className={styles.card}>
-          <img
+          <video
+            controls
+            autoplay
+            loop
+            muted
+            controlsList="nodownload"
+            src={`${process.env.NEXT_PUBLIC_WEB_ASSETS_URL}/website-assets/${asset}`}
+            className={styles.card_image}
+          >
+            <source src="movie.mp4" type="video/mp4" />
+            <source src="movie.ogg" type="video/ogg" />
+            Your browser does not support the video tag.
+          </video>
+          {/* <img
             src={`${process.env.NEXT_PUBLIC_WEB_ASSETS_URL}/website-assets/${image}`}
             alt="image"
             className={styles.card_image}
-          />
+          /> */}
           <div>
             <h3 className={styles.card_title}>{title}</h3>
             <div className={styles.icon_wrapper}>
@@ -80,14 +93,27 @@ function Section() {
           isTablet && "invisible absolute"
         }`}
       >
-        {nftCardsData?.map(({ image, title, heading, desc1, desc2 }, index) => {
+        {nftCardsData?.map(({ asset, title, heading, desc1, desc2 }, index) => {
           return (
             <div className={styles.card}>
-              <img
+              <video
+                controls
+                autoplay
+                loop
+                muted
+                controlsList="nodownload"
+                src={`${process.env.NEXT_PUBLIC_WEB_ASSETS_URL}/website-assets/${asset}`}
+                className={styles.card_image}
+              >
+                <source src="movie.mp4" type="video/mp4" />
+                <source src="movie.ogg" type="video/ogg" />
+                Your browser does not support the video tag.
+              </video>
+              {/* <img
                 src={`${process.env.NEXT_PUBLIC_WEB_ASSETS_URL}/website-assets/${image}`}
                 alt="image"
                 className={styles.card_image}
-              />
+              /> */}
               <div>
                 <h3 className={styles.card_title}>{title}</h3>
                 <div className={styles.icon_wrapper}>

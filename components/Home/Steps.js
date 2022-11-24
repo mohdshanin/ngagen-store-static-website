@@ -22,7 +22,9 @@ function Steps() {
     <div className={styles.gradientBg}>
       <section className="inner_wrapper">
         <header className="center_align pb-4">
-          <h1 className="heading1">Deploy Innovative Marketing Campaings</h1>
+          <h1 className="heading1 text-align-center">
+            Deploy Innovative Marketing Campaigns
+          </h1>
           <p className="description1">Engage your Brand’s Community</p>
         </header>
         <div className={styles.step_wrapper}>

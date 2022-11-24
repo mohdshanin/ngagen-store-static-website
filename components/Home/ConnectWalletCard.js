@@ -27,15 +27,15 @@ function ConnectWalletCard() {
         <div className={styles.demo_container}>
           <div className={styles.card_text}>
             <h1 className="heading1">NFTs for D2C engagement</h1>
-            <summary className="heading3">
+            <summary className={styles.summary_text}>
               Even if you sell via partners, retailers, e-commerce platforms
             </summary>
-            <p className="description2">
+            <p className={styles.summary_text}>
               Web3 gives control of customer data to the customer. With 3rd
               party cookies on the way out, NFTs provide a solution for
               personalization, engagement & loyalty.
             </p>
-            <p className="description2">
+            <p className={styles.summary_text}>
               With ngageN, Brands can incentivize customers to share this data.
               55% of customers are willing to share personal data to be part of
               a brand’s community
