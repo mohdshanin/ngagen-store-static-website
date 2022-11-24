@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 
 import Carousel from "components/Common/Carousel";
 import LimitedIcon from "components/Common/Icons/Limited";
@@ -6,13 +6,13 @@ import ExclusiveIcon from "components/Common/Icons/Exclusive";
 import PhygitalIcon from "components/Common/Icons/Phygital";
 import DonateIcon from "components/Common/Icons/Donate";
 import CoCreateIcon from "components/Common/Icons/CoCreate";
-import FanIcon from "components/Common/Icons/Fan";
+import RecognizeIcon from "components/Common/Icons/Recognize";
 import useMobile from "hooks/useMobile";
 import styles from "./Home.module.css";
 
 const nftCardsData = [
   {
-    asset: "video-1.mp4",
+    asset: "video-3.mp4",
     title: "ABOVE THE GOLDEN CLOUDS",
     heading: "Consumer Brands",
     desc1: "Digital Art inspired by Architecture NFT",
@@ -28,7 +28,7 @@ const nftCardsData = [
       "NFT holders get access to physical jerseys, reward points & win gift vouchers",
   },
   {
-    asset: "video-3.mp4",
+    asset: "video-1.mp4",
     title: "Create your brand’s loyal community",
     heading: "Gaming",
     desc1: "Digital Trophies",
@@ -39,6 +39,13 @@ const nftCardsData = [
 
 function Section() {
   const isTablet = useMobile("(max-width: 1143px)");
+  const videoRef = useRef();
+
+  useEffect(() => {
+    if (videoRef) {
+      videoRef.current.autoPlay = true;
+    }
+  }, [videoRef]);
 
   const nftCarousel =
     nftCardsData?.map(({ asset, title, heading, desc1, desc2 }, index) => ({
@@ -46,8 +53,9 @@ function Section() {
       child: (
         <div className={styles.card}>
           <video
+            ref={videoRef}
             controls
-            autoplay
+            autoPlay
             loop
             muted
             controlsList="nodownload"
@@ -66,7 +74,7 @@ function Section() {
               {index === 0 && <CoCreateIcon width="24" height="24" />}
               {index === 1 && <DonateIcon width="24" height="24" />}
               {index === 1 && <PhygitalIcon width="24" height="24" />}
-              {index === 2 && <FanIcon width="26" height="26" />}
+              {index === 2 && <RecognizeIcon width="26" height="26" />}
             </div>
           </div>
           <summary className={styles.card_header}>{heading}</summary>
@@ -92,8 +100,9 @@ function Section() {
           return (
             <div className={styles.card}>
               <video
+                ref={videoRef}
                 controls
-                autoplay
+                autoPlay
                 loop
                 muted
                 controlsList="nodownload"
@@ -112,7 +121,7 @@ function Section() {
                   {index === 0 && <CoCreateIcon width="24" height="24" />}
                   {index === 1 && <DonateIcon width="24" height="24" />}
                   {index === 1 && <PhygitalIcon width="24" height="24" />}
-                  {index === 2 && <FanIcon width="26" height="26" />}
+                  {index === 2 && <RecognizeIcon width="26" height="26" />}
                 </div>
               </div>
               <summary className={styles.card_header}>{heading}</summary>
