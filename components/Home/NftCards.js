@@ -21,7 +21,7 @@ const nftCardsData = [
   },
   {
     asset: "video-2.mp4",
-    title: "Create your brand’s loyal community",
+    title: "SURJEET SINGH PHYGITAL",
     heading: "Sports",
     desc1: "Digital player cards",
     desc2:
@@ -29,7 +29,7 @@ const nftCardsData = [
   },
   {
     asset: "video-1.mp4",
-    title: "Create your brand’s loyal community",
+    title: "SUPER HIGH ROLLER",
     heading: "Gaming",
     desc1: "Digital Trophies",
     desc2:
