@@ -26,8 +26,9 @@
 }
 
 .ngagen_logo {
-  width: 36px;
+  width: 136px;
   height: auto;
+  margin-bottom: 25px;
 }
 
 .ngagen_logo_text {
@@ -128,7 +129,8 @@
     padding: 10px 25px 20px;
   }
   .ngagen_logo {
-    width: 32px;
+    width: 60px;
+    margin-top: 10px;
   }
   .ngagen_logo_text {
     font-size: 18px;

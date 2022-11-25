@@ -5,6 +5,8 @@ import TwitterIcon from "components/Common/Icons/Twitter";
 import InstagramIcon from "components/Common/Icons/Instagram";
 import DiscordIcon from "components/Common/Icons/Discord";
 import YoutubeIcon from "components/Common/Icons/Youtube";
+import useMobile from "hooks/useMobile";
+
 import styles from "./Footer.module.css";
 
 const footerSections = [
@@ -76,6 +78,8 @@ const socials = [
 ];
 
 function Footer() {
+  const isMobile = useMobile("(max-width: 780px)");
+
   function redirect(url) {
     window.open(url);
   }
@@ -85,16 +89,22 @@ function Footer() {
       <div className={styles.section_wrapper}>
         <section className={styles.left_section}>
           <div className={styles.logo_container}>
-            <img
-              src={`${process.env.NEXT_PUBLIC_WEB_ASSETS_URL}/logos/logo-2.png`}
-              alt="ngagen-logo"
-              className={styles.ngagen_logo}
-            />
-            <p
-              className={`${styles.ngagen_logo_text} orange-background text-mask`}
-            >
-              ngageN
-            </p>
+            <a href="https://www.ngagen.com">
+              {!isMobile && (
+                <img
+                  src={`${process.env.NEXT_PUBLIC_WEB_ASSETS_URL}/logos/logo-1.png`}
+                  alt="ngagen-logo"
+                  className={styles.ngagen_logo}
+                />
+              )}
+              {isMobile && (
+                <img
+                  src={`${process.env.NEXT_PUBLIC_WEB_ASSETS_URL}/logos/logo-2.png`}
+                  alt="ngagen-logo"
+                  className={styles.ngagen_logo}
+                />
+              )}
+            </a>
           </div>
           <div>
             <p className="description1">

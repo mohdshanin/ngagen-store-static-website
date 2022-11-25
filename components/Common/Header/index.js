@@ -5,7 +5,6 @@ import styles from "./Header.module.css";
 
 function Header() {
   const isMobile = useMobile("(max-width: 780px)");
-  const [isDemoBooked, setIsDemoBooked] = useState("");
 
   useEffect(() => {
     var prevScrollpos = window.pageYOffset;
@@ -33,39 +32,28 @@ function Header() {
     });
   }
 
-  function navigateToTop() {
-    window.scrollTo({
-      behavior: "smooth",
-      top: 0,
-    });
-  }
-
   return (
     <header id="navbar" className={styles.header_wrapper}>
-      <nav onClick={navigateToTop} className={styles.logo_container}>
-        {!isMobile && (
-          <img
-            src={`${process.env.NEXT_PUBLIC_WEB_ASSETS_URL}/logos/logo-1.png`}
-            alt="ngagen-logo"
-            className={styles.ngagen_logo}
-          />
-        )}
-        {isMobile && (
-          <img
-            src={`${process.env.NEXT_PUBLIC_WEB_ASSETS_URL}/logos/logo-2.png`}
-            alt="ngagen-logo"
-            className={styles.ngagen_logo}
-          />
-        )}
+      <nav className={styles.logo_container}>
+        <a href="https://www.ngagen.com">
+          {!isMobile && (
+            <img
+              src={`${process.env.NEXT_PUBLIC_WEB_ASSETS_URL}/logos/logo-1.png`}
+              alt="ngagen-logo"
+              className={styles.ngagen_logo}
+            />
+          )}
+          {isMobile && (
+            <img
+              src={`${process.env.NEXT_PUBLIC_WEB_ASSETS_URL}/logos/logo-2.png`}
+              alt="ngagen-logo"
+              className={styles.ngagen_logo}
+            />
+          )}
+        </a>
       </nav>
       <div className={styles.btn_container}>
-        <button
-          type="button"
-          onClick={toDemoForm}
-          disabled={isDemoBooked}
-          className="book_demo_btn"
-          title={isDemoBooked ? "You have already booked a demo" : ""}
-        >
+        <button type="button" onClick={toDemoForm} className="book_demo_btn">
           Book a demo
         </button>
       </div>
